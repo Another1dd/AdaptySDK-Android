@@ -126,8 +126,7 @@ class Adapty {
                     }
 
                     override fun fail(error: AdaptyError, reqID: Int) {
-                        adaptyCallback?.invoke(error)
-                        nextQueue()
+                        makeStartRequests(adaptyCallback)
                     }
                 })
             } else {
